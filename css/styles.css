@@ -1,0 +1,684 @@
+@charset "UTF-8";
+
+/* Reset de márgenes, rellenos y estilos de los elementos */
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  line-height: 1.5;
+  font-family: "Helvetica", sans-serif;
+  background-color: #222;
+  /* Fondo oscuro */
+  color: #fff;
+  /* Texto en blanco */
+}
+
+ul,
+ol {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.container {
+  width: 80%;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+header {
+  background-color: #000;
+  /* Fondo negro */
+  padding: 20px 0;
+  text-align: center;
+  color: #d4af37;
+  /* Color dorado */
+}
+
+
+/* Botones */
+.button {
+  background-color: #d4af37;
+  /* Dorado */
+  color: #000;
+  /* Texto negro */
+  padding: 10px 20px;
+  border-radius: 5px;
+  border: none;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+.button:hover {
+  background-color: #b08d2f;
+  /* Dorado más oscuro en hover */
+}
+
+/* Inputs y Textareas */
+input[type="text"],
+input[type="email"],
+textarea {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  margin-bottom: 15px;
+}
+
+textarea {
+  height: 150px;
+}
+
+/* Estilos para la barra de navegación */
+/* Barra de navegación */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* Contenedor de los enlaces (izquierda) */
+.navbar-nav {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  /* Ajusta el ancho según lo que necesites */
+}
+
+/* Formulario de búsqueda (centrado) */
+.d-flex {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Icono del carrito */
+.navbar-brand .fa-shopping-cart {
+  font-size: 1.5rem;
+  /* Ajusta el tamaño del ícono del carrito */
+  color: white;
+  margin-right: 10px;
+}
+
+/* Ajusta el padding y margen de los elementos */
+.navbar-brand {
+  margin-left: 30px;
+  margin-right: 30px;
+}
+
+/* Espacio entre los elementos de la navbar */
+.navbar-nav .navbar-brand {
+  margin-right: 10px;
+}
+
+/* Estilos adicionales si es necesario */
+.navbar-dark .navbar-brand {
+  color: white;
+}
+
+.navbar-dark .navbar-nav .navbar-brand {
+  color: white;
+}
+
+.navbar-dark .navbar-nav .navbar-brand:hover {
+  color: #f8f9fa;
+}
+
+
+
+/* Sección de contenido */
+.content h1,
+.content h2 {
+  text-align: center;
+  color: #d4af37;
+  /* Dorado para los títulos */
+}
+
+.content p {
+  color: #fff;
+  /* Texto en blanco */
+  font-size: 16px;
+  line-height: 1.6;
+  text-align: center;
+}
+
+/* Imágenes */
+.img-fluid {
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Sección de productos */
+.productos {
+  background-color: #333;
+  padding: 40px 0;
+  text-align: center;
+}
+
+.productos h2 {
+  color: #d4af37;
+  font-size: 2rem;
+  margin-bottom: 30px;
+}
+
+/* Cards de productos */
+.image-card-group {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.image-card {
+  width: 30%;
+  margin-bottom: 20px;
+}
+
+.image-card img {
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Cards de producto */
+.card {
+  background-color: #444;
+  color: #fff;
+  border-radius: 10px;
+  padding: 20px;
+  margin-top: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.card-title {
+  color: #d4af37;
+  font-size: 1.2rem;
+  margin-bottom: 10px;
+}
+
+.card-text {
+  font-size: 14px;
+  color: #bbb;
+  margin-bottom: 15px;
+}
+
+.card button {
+  background-color: white;
+  color: #000;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.card button:hover {
+  background-color: yellow;
+}
+
+/* Responsividad para pantallas más pequeñas */
+@media (max-width: 768px) {
+  .image-card {
+    width: 100%;
+    margin-bottom: 20px;
+  }
+
+  .navbar ul {
+    flex-direction: column;
+  }
+
+  .content h1,
+  .content h2 {
+    font-size: 1.5rem;
+  }
+
+  .content p {
+    font-size: 1rem;
+  }
+
+  .card {
+    margin-bottom: 20px;
+  }
+
+  .image-card-group {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .image-card {
+    width: 80%;
+  }
+}
+
+/* Sección de Resumen de Pedido y Pago */
+.summary-image {
+  width: 80px;
+  height: auto;
+  margin-right: 10px;
+  vertical-align: middle;
+}
+
+/* Estilo adicional al título */
+.order-summary h3 {
+  display: flex;
+  /* Usamos Flexbox para alinear la imagen y el texto */
+  align-items: center;
+  /* Alinea la imagen y el texto verticalmente */
+  font-size: 1.5rem;
+  /* Ajusta el tamaño del texto */
+  color: #d4af37;
+  /* Color dorado para el texto */
+}
+
+.order-summary {
+  background-color: #444;
+  padding: 20px;
+  margin-top: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+.order-summary h3 {
+  color: #d4af37;
+  /* Dorado */
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+}
+
+.order-summary .total {
+  color: #d4af37;
+  /* Dorado */
+  font-size: 1.8rem;
+  font-weight: bold;
+  text-align: center;
+
+}
+
+.payment-container {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 30px;
+}
+
+.payment-container .left-column,
+.payment-container .right-column {
+  width: 48%;
+}
+
+.payment-container .left-column {
+  background-color: #444;
+  padding: 20px;
+  border-radius: 8px;
+}
+
+.payment-container .right-column {
+  background-color: #333;
+  padding: 20px;
+  border-radius: 8px;
+}
+
+.payment-container h3 {
+  color: #d4af37;
+  /* Dorado */
+  font-size: 1.4rem;
+  margin-bottom: 20px;
+}
+
+.btn-purchase {
+  display: block;
+  width: 100%;
+  background-color: #d4af37;
+  /* Dorado */
+  color: #000;
+  padding: 15px;
+  border-radius: 8px;
+  border: none;
+  font-size: 1.2rem;
+  cursor: pointer;
+  text-align: center;
+  margin-top: 20px;
+}
+
+.btn-purchase:hover {
+  background-color: #b08d2f;
+  /* Dorado más oscuro */
+}
+
+/* Estilo para el botón "Pay Now" */
+.pay-now-container {
+  display: flex;
+  justify-content: center;
+  /* Centra horizontalmente */
+  align-items: center;
+  /* Centra verticalmente */
+  width: 100%;
+  /* Asegura que el contenedor ocupe todo el ancho disponible */
+  margin-top: 20px;
+  /* Espacio superior para separar de otros elementos */
+}
+
+.pay-now-button {
+  background-color: #d4af37;
+  /* Dorado */
+  color: #000;
+  /* Texto negro */
+  padding: 10px 20px;
+  /* Menor relleno para hacerlo más pequeño */
+  border-radius: 4px;
+  /* Bordes más redondeados */
+  border: none;
+  cursor: pointer;
+  font-size: 14px;
+  /* Tamaño de fuente más pequeño */
+  text-transform: uppercase;
+  /* Texto en mayúsculas */
+  font-weight: bold;
+  /* Resalta el texto */
+  display: inline-block;
+  /* Cambié de block a inline-block para que no ocupe todo el ancho */
+  text-align: center;
+  /* Centrado del texto */
+  margin-top: 10px;
+  /* Menor margen superior */
+}
+
+.pay-now-button:hover {
+  background-color: #b08d2f;
+  /* Dorado más oscuro en hover */
+}
+
+.pay-now-button:focus {
+  outline: none;
+  /* Elimina el borde por defecto */
+  box-shadow: 0 0 5px rgba(255, 165, 0, 0.8);
+  /* Sombra en el borde para indicar que el botón está enfocado */
+}
+
+.pay-now-button:active {
+  background-color: #9e7a28;
+  /* Cambia el color cuando se presiona */
+}
+
+.payment-form {
+  background-color: black;
+  color: white;
+  padding: 20px;
+}
+
+/* Newsletter */
+.newsletter {
+  background-color: #000;
+  color: #fff;
+  padding: 40px 20px;
+  text-align: center;
+  border-radius: 10px;
+  margin-top: 40px;
+  margin-bottom: 40px;
+  width: 80%;
+  /* Asegúrate de que la newsletter tenga el mismo ancho que la sección contenedora */
+  max-width: 600px;
+  /* Puedes ajustar este valor si deseas limitar el ancho máximo */
+  margin-left: auto;
+  margin-right: auto;
+  /* Centra el formulario en la página */
+}
+
+.newsletter input[type="email"] {
+  width: 80%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  margin-bottom: 15px;
+  background-color: #222;
+  color: #fff;
+  margin-bottom: 20px;
+}
+
+.newsletter input[type="submit"] {
+  background-color: #d4af37;
+  /* Dorado */
+  color: #000;
+  /* Texto negro */
+  padding: 10px 20px;
+  border-radius: 5px;
+  border: none;
+  cursor: pointer;
+}
+
+.newsletter input[type="submit"]:hover {
+  background-color: #b08d2f;
+  /* Dorado más oscuro en hover */
+}
+
+footer {
+  background-color: #000;
+  /* Fondo negro */
+  color: #fff;
+  /* Texto blanco */
+  text-align: center;
+  padding: 40px 0;
+  /* Ajusta el relleno */
+  width: 100%;
+  /* Asegura que ocupe todo el ancho */
+  position: relative;
+  /* Asegura que el footer no se solape con otros elementos */
+  bottom: 0;
+  min-height: 100px;
+  /* Añadido para asegurar que el footer tenga una altura mínima */
+}
+
+footer .footer-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  /* Centra el contenido verticalmente */
+}
+
+footer .footer-links ul {
+  display: flex;
+  gap: 20px;
+}
+
+footer .footer-social a {
+  color: #fff;
+  font-size: 24px;
+  margin: 0 10px;
+}
+
+footer .footer-social a:hover {
+  color: #d4af37;
+  /* Dorado en hover */
+}
+
+footer .footer-bottom {
+  margin-top: 20px;
+  font-size: 14px;
+  color: #bbb;
+  /* Gris claro */
+}
+
+/* Footer para las pantallas más pequeñas */
+@media (max-width: 768px) {
+  footer {
+    padding: 20px 0;
+    /* Reduce el padding en pantallas pequeñas */
+  }
+
+  footer .footer-bottom {
+    font-size: 12px;
+  }
+}
+
+.gallery {
+  display: flex;
+  justify-content: space-between;
+  /* Para separar las imágenes */
+  gap: 20px;
+  /* Espacio entre las imágenes */
+}
+
+.gallery img {
+  transition: transform 0.3s ease;
+  /* Transición suave para el hover */
+  border-radius: 8px;
+  /* Bordes redondeados, opcional */
+  max-width: 32%;
+  /* Asegura que las imágenes estén al 32% del contenedor para que entren en una fila */
+}
+
+.gallery img:hover {
+  transform: scale(1.1);
+  /* Efecto de aumento al hacer hover */
+}
+
+.about-gallery {
+  display: flex;
+  justify-content: space-between;
+  /* Alinea las imágenes en fila */
+  gap: 20px;
+  /* Espacio entre las imágenes */
+  opacity: 0;
+  /* Inicia la galería oculta */
+  animation: fadeIn 2s forwards 0.5s;
+  /* Hace que las imágenes se desvanecen gradualmente, más lento */
+}
+
+.about-item {
+  position: relative;
+  opacity: 0;
+  /* Hace que las imágenes y leyendas inicien ocultas */
+  animation: fadeInItems 2s forwards;
+  /* Animación para mostrar cada imagen más lentamente */
+  max-width: 100%;
+  /* Asegura que las imágenes mantengan el tamaño proporcional */
+}
+
+.about-item img {
+  width: 100%;
+  /* Asegura que las imágenes sean del mismo tamaño */
+  height: 100%;
+  /* Forzamos la altura también */
+  object-fit: cover;
+  /* Mantiene la proporción de la imagen sin distorsionarse */
+  border-radius: 8px;
+  transition: transform 0.3s ease;
+  /* Efecto hover para las imágenes */
+}
+
+.caption {
+  text-align: center;
+  font-size: 1.1rem;
+  opacity: 0;
+  /* Hace que las leyendas inicien ocultas */
+  animation: fadeInCaption 2s forwards 1s;
+  /* Animación para mostrar las leyendas más lentamente */
+  position: absolute;
+  bottom: 20px;
+  left: 0;
+  right: 0;
+}
+
+/* Hover: Efecto sobre la imagen */
+.about-item:hover img {
+  transform: scale(1.1);
+  /* Efecto hover para las imágenes */
+}
+
+/* Animaciones */
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes fadeInItems {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeInCaption {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.caption {
+  text-align: center;
+  font-size: 1.1rem;
+  opacity: 0;
+  animation: fadeInCaption 2s forwards 1s;
+  position: absolute;
+  bottom: 20px;
+  left: 0;
+  right: 0;
+  color: #FFD700;
+
+  font-weight: bold;
+
+}
+
+.contact-form .btn {
+  background-color: #FFD700;
+
+  color: black;
+
+  font-size: 16px;
+  padding: 10px 20px;
+
+  width: auto;
+
+  border: none;
+
+  border-radius: 4px;
+
+  text-align: center;
+}
+
+.btn-custom {
+  display: block;
+  /* Hace que el botón se comporte como un bloque */
+  margin: 0 auto;
+  /* Centra horizontalmente */
+  background-color: yellow;
+  /* Color amarillo para el botón */
+  color: black;
+  /* Color del texto */
+  width: 150px;
+  /* Ajusta el tamaño del botón */
+  font-size: 16px;
+  /* Ajusta el tamaño del texto */
+}
+
+
+
+.contact-form .btn:hover {
+  background-color: #FFC107;
+  color: white;
+
+}

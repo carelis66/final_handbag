@@ -1,0 +1,23 @@
+// _layout.scss
+@use 'sass:color';
+@use 'variables';
+
+.container {
+    width: 80%;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+header {
+    background-color: variables.$accent-color; // Usar con el prefijo 'variables.'
+    padding: 20px 0;
+    text-align: center;
+    color: variables.$light-color; // Usar con el prefijo 'variables.'
+}
+
+footer {
+    background-color: variables.$dark-color; // Usar con el prefijo 'variables.'
+    color: variables.$light-color; // Usar con el prefijo 'variables.'
+    text-align: center;
+    padding: 10px 0;
+}

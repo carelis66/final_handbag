@@ -1,0 +1,53 @@
+@use 'sass:color';
+@use 'variables' as *;
+
+// Botones
+.button {
+    background-color: $primary-color;
+    color: $light-color;
+    padding: 10px 20px;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+
+    &:hover {
+        background-color: color.scale($primary-color, $lightness: -10%);
+    }
+}
+
+// Formularios
+input[type="text"],
+input[type="email"],
+textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin-bottom: 15px;
+}
+
+textarea {
+    height: 150px;
+}
+
+// Navbar
+.navbar {
+    background-color: $primary-color;
+    padding: 10px;
+    text-align: center;
+
+    ul {
+        display: flex;
+        justify-content: center;
+        gap: 20px;
+
+        li {
+            list-style: none;
+        }
+
+        a {
+            color: $light-color;
+            font-size: 16px;
+        }
+    }
+}

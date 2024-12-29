@@ -1,0 +1,28 @@
+@use 'sass:color';
+@use 'variables'; // Asegúrate de importar las variables
+
+/* Reset de márgenes, rellenos y estilos de los elementos */
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    line-height: 1.5;
+    font-family: variables.$font-stack; // Usando el prefijo 'variables.'
+    background-color: variables.$secondary-color; // Usando el prefijo 'variables.'
+    color: variables.$primary-color; // Usando el prefijo 'variables.'
+}
+
+ul,
+ol {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
